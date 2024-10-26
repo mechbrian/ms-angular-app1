@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/mscienceLogo.jpg" alt="Logo" class="logo-image" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/">首頁</a></li>
+    <!-- <li><a href="#products">產品</a></li>
+    <li><a href="#service">服務</a></li> -->
+
+    <!-- 使用 routerLink 和 fragment -->
+    <!-- <li><a [routerLink]="['/']" fragment="products">產品</a></li> -->
+    <!-- 使用 routerLink 和 fragment -->
+    <!-- <li><a [routerLink]="['/']" fragment="service">服務</a></li> -->
+
+    <!-- <li><a routerLink="/contact">聯繫我們</a></li> -->
+    <li>
+      <a routerLink="/personal-info" routerLinkActive="active">About Myles</a>
+    </li>
+  </ul>
+  <div class="auth-form">
+    <form>
+      <input type="text" placeholder="用戶名" />
+      <input type="password" placeholder="密碼" />
+      <button type="submit">登入</button>
+      <a href="/register">註冊</a>
+    </form>
+  </div>
+</nav>

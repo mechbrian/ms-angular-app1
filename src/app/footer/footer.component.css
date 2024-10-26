@@ -1,0 +1,61 @@
+/* footer.component.css */
+
+/* 整體樣式 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 內容區塊樣式 */
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .contact-info, .social-media {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffdd57;
+  }
+  
+  p {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  /* 社交媒體圖示 */
+  .social-media a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-media img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* 確保圖示在深色背景上顯示清晰 */
+    transition: transform 0.3s;
+  }
+  
+  .social-media img:hover {
+    transform: scale(1.1); /* 當滑鼠懸停時，圖示放大效果 */
+  }
+  
+  /* 底部文字樣式 */
+  .footer-bottom {
+    padding-top: 10px;
+    font-size: 0.8em;
+    color: #aaa;
+  }
+  

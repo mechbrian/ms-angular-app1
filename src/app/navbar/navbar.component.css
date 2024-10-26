@@ -1,0 +1,33 @@
+.logo-image {
+  height: 40px; /* 設定 logo 圖片的高度 */
+  width: auto;  /* 讓寬度自動調整，保持圖片比例 */
+  margin-right: 10px; /* 調整 logo 與文字之間的間距 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: lightseagreen;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.auth-form input {
+  margin-right: 5px;
+  padding: 5px;
+}
