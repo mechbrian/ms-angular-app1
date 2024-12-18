@@ -5,23 +5,33 @@
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
     font-family: Arial, sans-serif;
   }
   
   /* 內容區塊樣式 */
   .footer-content {
-    display: flex;
-    justify-content: space-around;
+    display: flex;    
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #444;
+    gap: 0px;
+    padding-right: auto;
+    border-bottom: 1px solid #444;    
+    flex-wrap: wrap;
+  }
+
+  .footer-item{
+    padding-top: auto;
+    padding-left: 10%;
+    padding-right: auto;
   }
   
   .contact-info, .social-media {
     flex: 1;
-    min-width: 200px;
+    /* min-width: 200px; */
+    text-align: left;
+    align-content: center;
   }
   
   h3 {
@@ -31,21 +41,22 @@
   }
   
   p {
-    margin: 5px 0;
-    font-size: 0.9em;
+    margin: 6px 0;
+    font-size: 1em;
   }
   
   /* 社交媒體圖示 */
   .social-media a {
     display: inline-block;
-    margin: 0 10px;
+    /* margin: 0 10px; */
   }
   
   .social-media img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1); /* 確保圖示在深色背景上顯示清晰 */
+    width: 200x;
+    height: 200px;
+    /* filter: brightness(0) invert(1); 確保圖示在深色背景上顯示清晰 */
     transition: transform 0.3s;
+    object-fit: contain;
   }
   
   .social-media img:hover {
@@ -57,5 +68,6 @@
     padding-top: 10px;
     font-size: 0.8em;
     color: #aaa;
+    text-align: center;
   }
   
