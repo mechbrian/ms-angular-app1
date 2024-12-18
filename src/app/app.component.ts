@@ -12,6 +12,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { ServiceComponent } from './service/service.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ import { ServiceComponent } from './service/service.component';
     SidebarComponent,
     FooterComponent,
     PersonalInfoComponent,
-    ServiceComponent
+    ServiceComponent,
+    HeaderComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
