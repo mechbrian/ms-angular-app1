@@ -13,6 +13,14 @@ import { FooterComponent } from './footer/footer.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { ServiceComponent } from './service/service.component';
 import { HeaderComponent } from './header/header.component';
+import { CarouselComponent } from './carousel/carousel.component';
+
+interface CarouselItem {
+  image: string;
+  text?: string;
+  link: string;
+  altText?: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -28,14 +36,31 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent,
     PersonalInfoComponent,
     ServiceComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarouselComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
+
 export class AppComponent {
   isHome =true;  
-  title = 'ms-angular-app1';
+  title = 'MSCIENCE';
+
+  carouselData: CarouselItem[] = [
+    {
+      image: 'assets/daily.jpg',
+      text: 'This is daily products',
+      link: '#', // Placeholder link
+      altText: 'Daily Products'
+    },
+    {
+      image: 'assets/myles.jpg',
+      text: 'This is the second picture',
+      link: '#', // Placeholder link
+      altText: 'Daily Products'
+    }
+  ];
 
   constructor(private router: Router)
   {
