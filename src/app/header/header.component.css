@@ -1,176 +1,172 @@
 /* header.component.css */
 
 .header {
-    background-color: #f8f9fa; /* Light background */
-    padding: 10px 20px;
+  background-color: #f8f9fa; /* Light background */
+  padding: 10px 20px;
 }
 
 .header-top {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-.header-navigation {    
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+.header-navigation {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header-navigation ul{
-    display: flex;
-    list-style: none;
+.header-navigation ul {
+  display: flex;
+  list-style: none;
 }
 
-.header-navigation ul li{
-    position: relative;;
-}
-
-.header-submenu {
-    display: block;
+.header-navigation ul li {
+  position: relative;
 }
 
 .header-menu-button {
-    background: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font: inherit;
-    padding: 8px 12px;
-    color: #333;
-    display: block;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 12px;
+  color: #333;
+  display: block;
 }
 
 .header-menu-button:hover {
-    background-color: #e2e6ea;  /*change color */
-    border-radius: 4px;
+  background-color: #e2e6ea; /*change color */
+  border-radius: 4px;
 }
 
 .header-submenu {
-    display: none;
-    position: absolute;
-    top: 100%; /* 子菜單直接顯示在父菜單下方 */
-    left: 0;
-    background-color: #ffffff;
-    /* box-shadow: 0 2px 8px rgba(0,0,0,0.15); */
-    border-radius: 4px;
-    min-width: 150px;
-    z-index: 1000;
-    list-style: none; /* 移除列表樣式 */
-    padding: 0; /* 移除內邊距 */
-    margin: 0; /* 移除外邊距 */
-    /* opacity: 0; */
-    visibility: hidden;
-    /* transition: opacity 0.3s ease; 平滑過渡效果 */
+  display: none;
+  position: absolute;
+  top: 100%; /* 子菜單直接顯示在父菜單下方 */
+  left: 0;
+  background-color: #ffffff;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.15); */
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 1000;
+  list-style: none; /* 移除列表樣式 */
+  padding: 0; /* 移除內邊距 */
+  margin: 0; /* 移除外邊距 */
+  /* opacity: 0; */
+  visibility: hidden;
+  /* transition: opacity 0.3s ease; 平滑過渡效果 */
 }
 
 /* .header-navigation:hover .header-submenu{display: block;} */
 /* .header-navigation:hover .header-submenu li{display: block;} */
-.header-navigation ul li:hover > .header-submenu{
-    display: block; /* 懸停時顯示子菜單 */
-    /* opacity: 1; */
-    visibility: visible;
+.header-navigation ul li:hover > .header-submenu {
+  display: block; /* 懸停時顯示子菜單 */
+  /* opacity: 1; */
+  visibility: visible;
 }
 
 .header-submenu li {
-    width: 100%;
+  width: 100%;
 }
 
 .header-submenu li a {
-    padding: 10px 15px;
-    color: #333;
-    display: block; /* 確保整個區域可點擊 */
-    text-decoration: 
-    none; /* 移除下劃線 */
+  padding: 10px 15px;
+  color: #333;
+  display: block; /* 確保整個區域可點擊 */
+  text-decoration: none; /* 移除下劃線 */
+  pointer-events: auto; /* 允許點擊事件 */
 }
 
 .header-submenu li a:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /* 右側欄位內的每個項目 */
 .pwr-header-right-bar__item {
-    display: flex;
-    align-items: center;
-    position: relative; /* 使下拉菜單能夠絕對定位 */
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  position: relative; /* 使下拉菜單能夠絕對定位 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 電話項目特定樣式 */
 .pwr-header-right-bar__phone .pwr-header-right-bar__link {
-    display: flex;    
-    align-items: center;
-    color: #333;
-    text-decoration: none;
-    position: relative; /* 為卡片定位提供參考 */
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  position: relative; /* 為卡片定位提供參考 */
 }
 
 .pwr-header-right-bar__phone .pwr-header-right-bar__icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px; /* 圖標和文本之間的間距 */
-    fill: #333; /* 圖標顏色 */
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; /* 圖標和文本之間的間距 */
+  fill: #333; /* 圖標顏色 */
 }
 
 .pwr-header-right-bar__phone .pwr-header-right-bar__text {
-    font-size: 16px;
-    color: #333;
+  font-size: 16px;
+  color: #333;
 }
 
 /* 懸停顯示卡片 */
 .pwr-header-right-bar__phone:hover .pwr-header-right-bar__card {
-    display: block;
+  display: block;
 }
 
 .pwr-header-right-bar__card {
-    display: none; /* 默認隱藏卡片 */
-    position: absolute;
-    top: 100%; /* 卡片顯示在電話項目下方 */
-    left: auto;
-    right: 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    border-radius: 4px;
-    padding: 10px;
-    width: 200px;
-    z-index: 1000;
+  display: none; /* 默認隱藏卡片 */
+  position: absolute;
+  top: 100%; /* 卡片顯示在電話項目下方 */
+  left: auto;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px;
+  width: 200px;
+  z-index: 1000;
 }
 
 .pwr-header-right-bar__card p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #333;
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
 }
 
 .pwr-header-right-bar__card a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .pwr-header-right-bar__card a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* 滾動按鈕樣式 */
 .pwr-header-right-bar__scroll-button {
-    background-color: #add8e6; /* 淺藍色背景 */
-    border: none; /* 無邊框 */
-    border-radius: 5%; /* 圓形按鈕 */
-    width: 60x; /* 按鈕寬度，比電話圖標略大 */
-    height: 40px; /* 按鈕高度，比電話圖標略大 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 10px; /* 與電話圖標的間距 */
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #add8e6; /* 淺藍色背景 */
+  border: none; /* 無邊框 */
+  border-radius: 5%; /* 圓形按鈕 */
+  width: 60x; /* 按鈕寬度，比電話圖標略大 */
+  height: 40px; /* 按鈕高度，比電話圖標略大 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 10px; /* 與電話圖標的間距 */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .pwr-header-right-bar__scroll-button:hover {
-    background-color: #87cefa; /* 懸停時稍深的藍色 */
-    transform: scale(1.1); /* 懸停時放大按鈕 */
+  background-color: #87cefa; /* 懸停時稍深的藍色 */
+  transform: scale(1.1); /* 懸停時放大按鈕 */
 }
 
 .pwr-header-right-bar__scroll-button:focus {
-    outline: none; /* 移除聚焦時的輪廓 */
+  outline: none; /* 移除聚焦時的輪廓 */
 }

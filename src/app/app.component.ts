@@ -14,13 +14,14 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { ServiceComponent } from './service/service.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ProductComponent } from './product/product.component';
 
-interface CarouselItem {
-  image: string;
-  text?: string;
-  link: string;
-  altText?: string;
-}
+// interface CarouselItem {
+//   image: string;
+//   text?: string;
+//   link: string;
+//   altText?: string;
+// }
 
 @Component({
   selector: 'app-root',
@@ -37,7 +38,8 @@ interface CarouselItem {
     PersonalInfoComponent,
     ServiceComponent,
     HeaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProductComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -47,20 +49,20 @@ export class AppComponent {
   isHome =true;  
   title = 'MSCIENCE';
 
-  carouselData: CarouselItem[] = [
-    {
-      image: 'assets/daily.jpg',
-      text: 'This is daily products',
-      link: '#', // Placeholder link
-      altText: 'Daily Products'
-    },
-    {
-      image: 'assets/myles.jpg',
-      text: 'This is the second picture',
-      link: '#', // Placeholder link
-      altText: 'Daily Products'
-    }
-  ];
+  // carouselData: CarouselItem[] = [
+  //   {
+  //     image: 'assets/daily.jpg',
+  //     text: 'This is daily products',
+  //     link: '#', // Placeholder link
+  //     altText: 'Daily Products'
+  //   },
+  //   {
+  //     image: 'assets/myles.jpg',
+  //     text: 'This is the second picture',
+  //     link: '#', // Placeholder link
+  //     altText: 'Daily Products'
+  //   }
+  // ];
 
   constructor(private router: Router)
   {

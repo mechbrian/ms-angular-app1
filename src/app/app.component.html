@@ -1,19 +1,18 @@
 <app-header></app-header>
 <!-- <app-navbar></app-navbar> -->
- <!-- Carousel Component -->
-<app-carousel [carouselItems]="carouselData"></app-carousel>
-<!-- <app-banner></app-banner> -->
+ <!-- <app-banner></app-banner> -->
 
 <!-- router-outlet 用於切換不同路由頁面內容 -->
 <router-outlet></router-outlet>
 
 <!-- 僅在首頁顯示其他靜態內容 -->
-<div *ngIf="isHome">
-  <div class="main-content">
+<!-- <div *ngIf="isHome"> -->
+  <!-- <div class="main-content"> -->
     <!-- <app-product-info id="products"></app-product-info> -->
     <!-- <app-service id="service"></app-service> -->
-  </div>
+    <!-- <app-carousel [carouselItems]="carouselData"></app-carousel> -->
+  <!-- </div> -->
   <!-- <app-sidebar></app-sidebar> -->
-</div>
+<!-- </div> -->
 
 <app-footer></app-footer>
