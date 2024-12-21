@@ -1,39 +1,38 @@
 /* personal-info.component.css */
 .personal-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .profile-photo {
-    margin-bottom: 20px;
-  }
-  
-  .photo {
-    width: 150px;            /* 設定個人照片的大小 */
-    height: 150px;
-    border-radius: 50%;       /* 圓形照片 */
-    object-fit: cover;        /* 圖片適應容器 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin: 10px 0;
-  }
-  
-  .features {
-    list-style-type: none;    /* 移除預設的條列點 */
-    padding: 0;
-    text-align: center;
-  }
-  
-  .features li {
-    font-size: 18px;
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.profile-photo {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  width: 80%;
+  border-radius: 1%; /* 圓形照片 */
+  object-fit: cover; /* 圖片適應容器 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
+
+.personal-description {
+  flex: 1 1 50%;
+  padding: 0 20px;
+  text-align: left;
+  display: flex; /* Use flexbox for the description */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align content to the top */
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}

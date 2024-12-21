@@ -1,16 +1,27 @@
 <!-- product.component.html -->
 
-<h2>{{ errorMsg}}</h2>
-<h2>{{ checkId}}</h2>
-<h2>{{ product?.name }}</h2>
-<h2>{{product?.price}}</h2>
-
 <div *ngIf="product; else notFound" class="product-detail">
-  <h2>{{ errorMsg}}</h2>
-  <h2>{{ product?.name }}</h2>
-  <img [src]="product?.imageUrl" [alt]="product?.name" class="product-image" />
-  <p>{{ product?.description }}</p>
-  <p>{{ product?.price }}</p>
+  <h2 calss="product-name">{{ product?.name }}</h2>
+
+  <!-- 2nd Row: Description and Image -->
+  <div class="product-main">
+    <div class="product-description">
+      <p>{{ product?.description }}</p>
+    </div>
+    <div class="product-image">
+      <img [src]="product?.imageUrl" [alt]="product?.name" />
+    </div>
+  </div>
+
+  <!-- 3rd Row: Feature Lists -->
+  <div class="product-features">
+    <div class="feature-category" *ngFor="let feature of product?.featureList">
+      <h3>{{ feature.title }}</h3>
+      <ul>
+        <li *ngFor="let f of feature.features">{{ f }}</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <ng-template #notFound>

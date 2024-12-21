@@ -1,49 +1,32 @@
-<div class="info-section">
-  <h2 class="section-title">服務</h2>
-  <div class="item-list">
-    <div class="item">
-      <h3 class="item-title">$2,000 Sales Training PKG for 2 days</h3>
-      <ul class="feature-list">
-        <li>🔹 Advanced Concepts in Aesthetic Trends</li>
-        <li>🔹 Sales Skills Training</li>
-        <li>🔹 Integrated Follow-Up Techniques</li>
-        <li>🔹 Self-Worth Development</li>
-        <li>🔹 Customer Service Training</li>
-        <li>🔹 Customized Q&A</li>
-        <li>🔹 2 Times Sales Revenue Improvement</li>
+<!-- product.component.html -->
+
+<div *ngIf="service; else notFound" class="service-detail">
+  <h2 calss="service-name">{{ service?.name }}</h2>
+
+  <!-- 2nd Row: Description and Image -->
+  <div class="product-main">
+    <!-- <div class="product-description">
+      <p>{{ service?.description }}</p>
+    </div> -->
+    <div class="product-image">
+      <img [src]="service?.imageUrl" [alt]="service?.name" />
+    </div>
+  </div>
+
+  <!-- 3rd Row: Feature Lists -->
+  <div class="product-features">
+    <div class="feature-category" *ngFor="let feature of service?.featureList">
+      <h3>{{ feature.title }}</h3>
+      <ul>
+        <li *ngFor="let f of feature.features">{{ f }}</li>
       </ul>
     </div>
-    <div class="item">
-      <h3 class="item-title">$3,500 One Day Machine Training</h3>
-      <img
-        src="assets/machineTraining.jpg"
-        alt="machineTraining"
-        class="item-photo"
-      />
-      <ul class="feature-list">
-        <li>🔹 RF Machines</li>
-        <li>🔹 Ultrasounds Lifting</li>
-        <li>🔹 Laser Machines</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="item-title">$4,999 Two Days PDO Threads Training</h3>
-      <img src="assets/pdoTraining.jpg" alt="pdoTraining" class="item-photo" />
-      <ul class="feature-list">
-        <li>🔹 Products Supply</li>
-        <li>🔹 Injection Techniques</li>
-        <li>🔹 Custumizes Level Educaiton</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3 class="item-title">Botox and Filler Courses</h3>      
-      <ul class="feature-list">
-        <li>🔹 $4,500 Dermal Filler & Botulinum Toxin Foundation</li>
-        <li>🔹 $2,000 Botulinum Toxin Advanced Training</li>
-        <li>🔹 $2,500 Dermal Filler Advanced Training</li>
-        <li>🔹 $4,999 Dermal Filler High Risk Course</li>
-      </ul>
-    </div>
-    <!-- 添加更多服務條目 -->
   </div>
 </div>
+
+<ng-template #notFound>
+  <div class="not-found">
+    <h2>Product not found!</h2>
+    <p>The product you are looking for does not exist.</p>
+  </div>
+</ng-template>
