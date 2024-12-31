@@ -1,0 +1,21 @@
+<div class="card-container">
+  <div class="card" *ngFor="let item of items; let i = index">
+    <a [href]="item.link">
+      <!-- 如果圖片未發生錯誤，顯示圖片 -->
+      <ng-container *ngIf="!imageErrorIndices.has(i); else noImage">
+        <img
+          [src]="item.image"
+          [alt]="item.altText || item.title"
+          class="card-image"
+        />
+      </ng-container>
+      <ng-template #noImage>
+        <div class="card-image no-image"></div>
+      </ng-template>
+      <div class="card-content">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </a>
+  </div>
+</div>
