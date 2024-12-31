@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarouselComponent } from '../carousel/carousel.component';
+import { BannerComponent } from "../banner/banner.component";
 
 interface CarouselItem {
   image: string;
@@ -8,10 +9,15 @@ interface CarouselItem {
   altText?: string;
 }
 
+interface BannerContent {
+  image: string;
+  text: string;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarouselComponent],
+  imports: [CarouselComponent, BannerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -38,5 +44,10 @@ export class HomeComponent {
       altText: 'training',
     }
   ];
+
+  homeBannerContent: BannerContent = {
+    image: 'assets/homer.gif', // Replace with your image path
+    text: 'Welcome to MSCIENCE!'
+  };
 
 }

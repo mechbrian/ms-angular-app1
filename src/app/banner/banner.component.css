@@ -1,20 +1,44 @@
-/* banner.component.css */
 .banner {
-  width: 100vw;                       /* 寬度為視窗寬度 */
-  height: 100x;                      /* 設定固定的高度，例如 400px */
-  background-image: url('/assets/bannerTemp.jpg'); /* 背景圖片路徑 */
-  background-size: cover;              /* 圖片自適應覆蓋寬度，並裁切多餘部分 */
-  background-position: center;         /* 圖片居中顯示 */
-  background-repeat: no-repeat;        /* 防止圖片重複 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+  width: 100%;
+  position: relative; /* 為子元素的絕對定位提供參考 */
+  overflow: hidden; /* 隱藏超出容器的內容 */
 }
 
 .banner-content {
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);      /* 可選：背景半透明效果 */
-  border-radius: 8px;
+  position: relative; /* 為 h1 的絕對定位提供參考 */
+}
+
+.banner-content img {
+  width: 100%; /* 圖片寬度佔滿父容器 */
+  height: 500px; /* 圖片高度，可根據需求調整 */
+  object-fit: cover; /* 圖片覆蓋容器且保持比例 */
+  display: block; /* 移除圖片下方的間距 */
+}
+
+.banner-content h1 {
+  position: absolute; /* 絕對定位 */
+  bottom: 20px; /* 距離容器底部 20px */
+  left: 20px; /* 距離容器左側 20px */
+  margin: 0; /* 移除默認外邊距 */
+  padding: 10px 20px; /* 內邊距，增加可讀性 */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景，提高文字可讀性 */
+  color: #fff; /* 白色文字 */
+  font-size: 2em; /* 字體大小 */
+  border-radius: 5px; /* 圓角邊框 */
+}
+
+/* 響應式設計：手機設備下調整圖片高度和文字大小 */
+@media (max-width: 768px) {
+  /* 調整圖片高度 */
+  .banner-content img {
+    height: 250px; /* 調整為較小的高度 */
+  }
+
+  /* 調整 h1 標題的字體大小和位置 */
+  .banner-content h1 {
+    font-size: 1.5em; /* 減小字體大小 */
+    bottom: 10px; /* 距離底部更近 */
+    left: 10px; /* 距離左側更近 */
+    padding: 5px 10px; /* 減小內邊距 */
+  }
 }
