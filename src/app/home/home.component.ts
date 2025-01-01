@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { BannerComponent } from "../banner/banner.component";
 import { CardListComponent } from "../card-list/card-list.component";
+import { InstagramComponent } from "../instagram/instagram.component";
 
 interface CarouselItem {
   image: string;
@@ -26,7 +27,7 @@ interface CardItem {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarouselComponent, BannerComponent, CardListComponent],
+  imports: [CarouselComponent, BannerComponent, CardListComponent, InstagramComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

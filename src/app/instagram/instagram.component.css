@@ -1,0 +1,54 @@
+/* src/app/instagram/instagram.component.css */
+
+.instagram-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;    
+  }
+  
+  .description {
+    flex: 1;
+    /* No background, only text */
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .instagram-embed {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .instagram-media {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 768px) {
+    .instagram-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .instagram-embed {
+      width: 100%;
+    }
+  
+    .instagram-media {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .description {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+  
