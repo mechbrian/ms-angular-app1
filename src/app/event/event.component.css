@@ -1,0 +1,134 @@
+/* src/app/event-detail/event-detail.component.css */
+
+/* 
+  Event Container
+  Centers the event detail card and sets maximum width for better readability.
+*/
+.event-detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 
+    Event Image Section
+    Displays the event image at the top, spanning the full width of the container.
+    The height adjusts based on the aspect ratio to maintain image integrity.
+  */
+  .event-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Adjust the aspect ratio as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* 
+    Event Details Section
+    Contains all textual information about the event with appropriate spacing and typography.
+  */
+  .event-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* 
+    Event Name Styling
+    Highlights the event name with a larger font size and bold weight.
+  */
+  .event-name {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    color: #333333;
+  }
+  
+  /* 
+    Event Date Styling
+    Styles the event date with a distinct color and spacing.
+  */
+  .event-date {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #555555;
+  }
+  
+  /* 
+    Event Time Styling
+    Styles the event time with consistent typography.
+  */
+  .event-time {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555555;
+  }
+  
+  /* 
+    Event Location Styling
+    Styles the event location with consistent typography.
+  */
+  .event-location {
+    font-size: 1em;
+    margin: 5px 0 15px 0;
+    color: #555555;
+  }
+  
+  /* 
+    Event Description Styling
+    Provides a clear and readable layout for the event description.
+  */
+  .event-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666666;
+  }
+  
+  /* 
+    Responsive Design for Smaller Screens
+    Adjusts padding and font sizes for optimal viewing on mobile devices.
+  */
+  @media (max-width: 768px) {
+    .event-detail-container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .event-name {
+      font-size: 1.5em;
+    }
+  
+    .event-date,
+    .event-time,
+    .event-location,
+    .event-description {
+      font-size: 0.95em;
+    }
+  
+    .event-image {
+      aspect-ratio: 4 / 3; /* Optional: Adjust aspect ratio for smaller screens */
+    }
+  }
+  
+  /* 
+    Hover Effects (Optional)
+    Adds interactivity by slightly elevating the card and enhancing the shadow on hover.
+  */
+  .event-detail-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* 
+    Transition Smoothness
+    Ensures smooth transitions for hover effects.
+  */
+  .event-detail-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
