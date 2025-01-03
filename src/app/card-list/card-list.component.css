@@ -1,9 +1,14 @@
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+  /* flex-wrap: wrap; */
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Maximum width to prevent excessive stretching */
+  grid-auto-rows: 220px; /* Sets the height of each row */
+  margin-top: 20px; /* Centers the grid */
 }
 
 .card {
@@ -44,7 +49,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 10px 15px; 
+  padding: 10px 15px;
   color: #ffffff; /* White text for contrast */
   width: 100%;
   box-sizing: border-box;
@@ -62,18 +67,32 @@
   font-size: 1em;
 }
 
-/* 響應式設計 */
+/* 
+  Responsive Design for Medium Screens (Tablets)
+  Adjusts the grid to two columns for better readability on medium-sized devices.
+*/
+@media (max-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+/* 
+  Responsive Design for Small Screens (Mobile Devices)
+  Adjusts the grid to a single column for optimal viewing on mobile devices.
+*/
 @media (max-width: 768px) {
-  .card-image,
-  .no-image {
-    height: 150px; /* 調整高度以適應小屏幕 */
+  .card-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
+}
 
-  .card-content h3 {
-    font-size: 1.2em;
-  }
-
-  .card-content p {
-    font-size: 0.9em;
+/* 
+  Optional: Center the events container horizontally within the wrapper.
+  Ensures that on larger screens, the container doesn't stretch too much.
+*/
+@media (min-width: 1201px) {
+  .card-container {
+    margin: 0 auto; /* Centers the container */
   }
 }
