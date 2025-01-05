@@ -44,12 +44,35 @@ export class HeaderComponent {
     this.loading = true;
 
     // my test setting
+    // emailjs
+    //   .sendForm(
+    //     'service_nfhfu2f',
+    //     'template_n4ftd04',
+    //     e.target as HTMLFormElement,
+    //     { publicKey: '5Ordmgy2UVNZZlcDi' }
+    //   )
+    //   .then(
+    //     (result: EmailJSResponseStatus) => {
+    //       console.log('SUCCESS!', result.text);
+    //       alert('Your message has been sent successfully!');
+    //       this.loading = false;
+    //       this.closeByDocument();
+    //       (e.target as HTMLFormElement).reset(); // Optionally reset the form
+    //     },
+    //     (error) => {
+    //       console.log('FAILED...', error.text);
+    //       alert('Failed to send your message. Please try again.');
+    //       this.loading = false;
+    //     }
+    //   );
+
+    // Myles setting
     emailjs
       .sendForm(
-        'service_nfhfu2f',
-        'template_n4ftd04',
+        'msciencesales@gmail.com',
+        'template_5rf5nqr',
         e.target as HTMLFormElement,
-        { publicKey: '5Ordmgy2UVNZZlcDi' }
+        { publicKey: '1LX--ztrOQJ49Ec-A' }
       )
       .then(
         (result: EmailJSResponseStatus) => {
@@ -65,27 +88,5 @@ export class HeaderComponent {
           this.loading = false;
         }
       );
-
-    // Myles setting
-    // emailjs
-    //   .sendForm(
-    //     'msciencesales@gmail.com',
-    //     'template_5rf5nqr',
-    //     e.target as HTMLFormElement,
-    //     { publicKey: '1LX--ztrOQJ49Ec-A' }
-    //   )
-    //   .then(
-    //     (result: EmailJSResponseStatus) => {
-    //       console.log('SUCCESS!', result.text);
-    //       alert('Your message has been sent successfully!');
-    //       this.loading = false;
-    //       (e.target as HTMLFormElement).reset(); // Optionally reset the form
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error.text);
-    //       alert('Failed to send your message. Please try again.');
-    //       this.loading = false;
-    //     }
-    //   );
   }
 }
