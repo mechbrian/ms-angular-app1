@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
-import {Router, NavigationEnd} from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { BannerComponent } from './banner/banner.component';
@@ -15,6 +15,7 @@ import { ServiceComponent } from './service/service.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
+
 
 // interface CarouselItem {
 //   image: string;
@@ -39,14 +40,13 @@ import { ProductComponent } from './product/product.component';
     ServiceComponent,
     HeaderComponent,
     CarouselComponent,
-    ProductComponent
+    ProductComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-
 export class AppComponent {
-  isHome =true;  
+  isHome = true;
   title = 'MSCIENCE';
 
   // carouselData: CarouselItem[] = [
@@ -64,11 +64,10 @@ export class AppComponent {
   //   }
   // ];
 
-  constructor(private router: Router)
-  {
+  constructor(private router: Router) {
     // 監聽路由事件，根據當前路徑設置 isHome
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.isHome = event.url === '/'; // 當路徑為 '/' 時，設置 isHome 為 true
       });

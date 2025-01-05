@@ -87,13 +87,84 @@
           <button
             class="pwr-header-right-bar__scroll-button"
             aria-label="Scroll to Bottom"
-            (click)="scrollToFooter()"
+            (click)="openByDocument()"
           >
             Contact Us
           </button>
         </div>
       </div>
       <!-- 右側欄位 -->
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal" id="exampleModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            (click)="closeByDocument()"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form (submit)="sendEmail($event)">
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="userEmail"
+                name="user_email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                name="user_firstname"
+                placeholder="Fist Name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="userMessage" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="userMessage"
+                name="message"
+                rows="4"
+                required
+              >
+Hello Myles, I would like to inquire about your products and services.
+          </textarea
+              >
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-50"  [disabled]="loading">Send
+              <span *ngIf="!loading">Send</span>
+              <span *ngIf="loading">
+                Sending...
+                <span
+                  class="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <!-- <div class="modal-footer"> -->
+          <!-- <button type="button" class="btn btn-secondary" (click)="closeByDocument()">Close</button> -->
+          <!-- <button type="button" class="btn btn-primary">Send</button> -->
+        <!-- </div> -->
+      </div>
     </div>
   </div>
 </header>
