@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
   ];
 
   homeBannerContent: BannerContent = {
-    image: 'assets/homer.gif', // Replace with your image path
+    image: 'assets/pnplus01.gif', // Replace with your image path
     text: 'Welcome to MSCIENCE!',
   };
 

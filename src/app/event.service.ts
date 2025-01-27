@@ -9,7 +9,7 @@ export class EventService {
   
   private events: Event[] = [
     {
-      image: 'assets/homer01.jpg',
+      image: 'assets/mscienceLogo.jpg',
       index: '1',
       name: 'Angular Conference 2024',
       date: new Date('2024-06-15'),
@@ -18,7 +18,7 @@ export class EventService {
       description: 'Join us for a day of Angular insights and networking.',
     },
     {
-      image: 'assets/homer01.jpg',
+      image: 'assets/mscienceLogo.jpg',
       index: '2',
       name: 'Web Development Workshop',
       date: new Date('2024-07-20'),
@@ -28,7 +28,7 @@ export class EventService {
         'Hands-on workshop covering the latest in web technologies.',
     },
     {
-      image: 'assets/homer01.jpg',
+      image: 'assets/mscienceLogo.jpg',
       index: '3',
       name: 'Startup Pitch Night',
       date: new Date('2024-08-05'),
@@ -38,7 +38,7 @@ export class EventService {
         'Watch startups pitch their ideas to investors and mentors.',
     },
     {
-      image: 'assets/homer01.jpg',
+      image: 'assets/mscienceLogo.jpg',
       index: '4',
       name: 'Tech Meetup',
       date: new Date('2024-09-10'),
